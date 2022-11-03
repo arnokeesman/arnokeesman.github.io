@@ -1,5 +1,5 @@
 Student name: Arno Keesman
 Student number: 705693
 Student class: HAINFVT1C
-URL student GitHub website: https://github.com/arnokeesman/arnokeesman.github.io
-URL student GitHub repository: https://arnokeesman.github.io/
+URL student GitHub website: https://arnokeesman.github.io/
+URL student GitHub repository: https://github.com/arnokeesman/arnokeesman.github.io
