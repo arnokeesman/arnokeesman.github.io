@@ -48,7 +48,7 @@ nav a:hover:not(.active) {
 	bottom: 0;
 }
 
-footer {
+body > footer {
 	clear: both;
 }
 
