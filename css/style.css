@@ -179,6 +179,26 @@ aside a img {
 	display: flex;
 }
 
+textarea {
+	overflow: auto;
+}
+
+form {
+	border: 1px solid black;
+	border-radius: 10px;
+	/* width: 50%; */
+}
+
+.contactPage main {
+	display: flex;
+}
+.contactPage main p {
+	flex-basis: 100%;
+}
+.contactPage main form {
+	flex-grow: 1;
+}
+
 @media screen and (max-width: 480px) {
 
 	/* mobile */
@@ -237,6 +257,12 @@ aside a img {
 		width: 100%;
 	}
 
+	.contactPage main {
+		flex-direction: column;
+	}
+	.contactPage main aside {
+		width: 100%;
+	}
 }
 
 @media screen and (min-width: 481px) and (max-width: 1279px) {
@@ -293,4 +319,6 @@ aside a img {
 	.pricingPage main table {
 		flex-grow: 1;
 	}
+	
+
 }
