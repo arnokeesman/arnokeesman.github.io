@@ -48,6 +48,10 @@ nav a:hover:not(.active) {
 	bottom: 0;
 }
 
+footer {
+	clear: both;
+}
+
 footer section {
 	padding: .5rem;
 }
@@ -167,6 +171,14 @@ header h2,
 	max-width: 100%;
 }
 
+aside a img {
+	max-width: 100%;
+}
+
+.pricingPage main {
+	display: flex;
+}
+
 @media screen and (max-width: 480px) {
 
 	/* mobile */
@@ -182,7 +194,7 @@ header h2,
 		width: 10em;
 	}
 
-	aside {
+	.homePage aside {
 		order: -1;
 	}
 
@@ -210,6 +222,21 @@ header h2,
 	.articles {
 		flex-direction: column-reverse;
 	}
+
+	body header img {
+		display: none;
+	}
+	body header h1 {
+		max-width: 70%;
+	}
+	#innovationBabble {
+		display: none;
+	}
+
+	.pricingPage main aside {
+		width: 100%;
+	}
+
 }
 
 @media screen and (min-width: 481px) and (max-width: 1279px) {
@@ -219,12 +246,23 @@ header h2,
 		float: left;
 	}
 
-	aside {
+	.homePage aside {
 		order: -1;
 	}
 
 	.articles {
 		flex-direction: column-reverse;
+	}
+
+	.pricingPage main {
+		flex-direction: column;
+	}
+	.pricingPage main aside {
+		display: flex;
+		width: 100%;
+	}
+	#product1 {
+		display: none;
 	}
 }
 
@@ -249,4 +287,10 @@ header h2,
 			'inno1 inno2 inno3';
 	}
 
+	.pricingPage main article {
+		flex-basis: 100%;
+	}
+	.pricingPage main table {
+		flex-grow: 1;
+	}
 }
