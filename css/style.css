@@ -1,0 +1,252 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+nav {
+	margin-bottom: 2rem;
+}
+
+nav ul {
+	list-style-type: none;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+	background-color: #444;
+}
+
+nav li {
+	float: left;
+}
+
+nav li:last-child {
+	float: right;
+}
+
+nav a {
+	display: block;
+	padding: .5rem;
+	text-decoration: none;
+	color: #fff;
+}
+
+nav a.active {
+	background-color: #595;
+}
+
+nav a:hover:not(.active) {
+	background-color: #222;
+}
+
+
+.cookieStatement {
+	color: #fff;
+	opacity: 50%;
+	background-color: #FA0;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+footer section {
+	padding: .5rem;
+}
+
+footer section:first-child {
+	overflow: hidden;
+}
+
+#cookieStatement {
+	width: 20em;
+	background-color: #FA0;
+	color: #FFF;
+	opacity: 50%;
+	float: right;
+	text-align: center;
+}
+
+header img {
+	height: 50px;
+}
+
+header h1 {
+	margin: 0;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+td,
+th {
+	padding: 3px;
+	border: 1px solid black;
+
+}
+
+tfoot td {
+	text-align: center;
+}
+
+video {
+	max-width: 100%;
+	flex: 1 0 100%;
+}
+
+form label {
+	margin-top: 1rem;
+	text-align: center;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+	;
+}
+
+.articles {
+	display: flex;
+	flex-direction: column;
+}
+
+.articles article {
+	min-height: 15rem;
+}
+
+main figure img {
+	height: 10rem;
+}
+
+aside {
+	width: 17rem;
+}
+
+#menuCheckbox {
+	display: none;
+	margin: 0.5rem;
+	width: 6rem;
+}
+
+#menuCheckbox::before {
+	content: "menu";
+	/* color: lightblue; */
+}
+
+header h1,
+header h2,
+.articles {
+	margin-left: .4rem;
+}
+
+.productPage #information1 { grid-area: inf1; }
+.productPage #information2 { grid-area: inf2; }
+.productPage #information3 { grid-area: inf3; }
+.productPage #information4 { grid-area: inf4; }
+.productPage #information5 { grid-area: inf5; }
+.productPage #information6 { grid-area: inf6; }
+.productPage #innovation1 { grid-area: inno1; }
+.productPage #innovation2 { grid-area: inno2; }
+.productPage #innovation3 { grid-area: inno3; }
+
+.gridContainer {
+	display: grid;
+	padding: 10px;
+	gap: 10px;
+}
+
+.gridContainer article {
+	border: 1px solid black;
+}
+
+.gridContainer img {
+	max-width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+
+	/* mobile */
+	video {
+		display: none;
+	}
+
+	main figure {
+		float: left;
+	}
+
+	figure img {
+		width: 10em;
+	}
+
+	aside {
+		order: -1;
+	}
+
+	.articles {
+		margin-bottom: 1rem;
+	}
+
+	#menuCheckbox {
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: block;
+	}
+
+	nav li {
+		display: none;
+
+	}
+
+	#menuCheckbox:checked ~ ul li {
+		display: block;
+		width: 100%;
+	}
+
+	.articles {
+		flex-direction: column-reverse;
+	}
+}
+
+@media screen and (min-width: 481px) and (max-width: 1279px) {
+	/* tablet */
+
+	main figure {
+		float: left;
+	}
+
+	aside {
+		order: -1;
+	}
+
+	.articles {
+		flex-direction: column-reverse;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	/* PC */
+
+	main figure {
+		float: right;
+	}
+
+	.articles {
+		flex-grow: 1;
+		width: 70%;
+	}
+
+	.gridContainer {
+		grid-template-areas: 
+			'inf2  inf1  inf3'
+			'inf5  inf1  inf3'
+			'inf5  inf1  inf4'
+			'inf5  inf6  inf6'
+			'inno1 inno2 inno3';
+	}
+
+}
