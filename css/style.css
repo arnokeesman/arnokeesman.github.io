@@ -147,15 +147,41 @@ header h2,
 	margin-left: .4rem;
 }
 
-.productPage #information1 { grid-area: inf1; }
-.productPage #information2 { grid-area: inf2; }
-.productPage #information3 { grid-area: inf3; }
-.productPage #information4 { grid-area: inf4; }
-.productPage #information5 { grid-area: inf5; }
-.productPage #information6 { grid-area: inf6; }
-.productPage #innovation1 { grid-area: inno1; }
-.productPage #innovation2 { grid-area: inno2; }
-.productPage #innovation3 { grid-area: inno3; }
+#information1 {
+	grid-area: inf1;
+}
+
+#information2 {
+	grid-area: inf2;
+}
+
+#information3 {
+	grid-area: inf3;
+}
+
+#information4 {
+	grid-area: inf4;
+}
+
+#information5 {
+	grid-area: inf5;
+}
+
+#information6 {
+	grid-area: inf6;
+}
+
+#innovation1 {
+	grid-area: inno1;
+}
+
+#innovation2 {
+	grid-area: inno2;
+}
+
+#innovation3 {
+	grid-area: inno3;
+}
 
 .gridContainer {
 	display: grid;
@@ -165,6 +191,7 @@ header h2,
 
 .gridContainer article {
 	border: 1px solid black;
+	padding: 5px;
 }
 
 .gridContainer img {
@@ -192,9 +219,11 @@ form {
 .contactPage main {
 	display: flex;
 }
+
 .contactPage main p {
 	flex-basis: 100%;
 }
+
 .contactPage main form {
 	flex-grow: 1;
 }
@@ -234,7 +263,7 @@ form {
 
 	}
 
-	#menuCheckbox:checked ~ ul li {
+	#menuCheckbox:checked~ul li {
 		display: block;
 		width: 100%;
 	}
@@ -246,9 +275,11 @@ form {
 	body header img {
 		display: none;
 	}
+
 	body header h1 {
 		max-width: 70%;
 	}
+
 	#innovationBabble {
 		display: none;
 	}
@@ -260,8 +291,31 @@ form {
 	.contactPage main {
 		flex-direction: column;
 	}
+
 	.contactPage main aside {
 		width: 100%;
+	}
+
+	.gridContainer {
+		grid-template-areas:
+			'inf5  inf5 '
+			'inf3  inf3 '
+			'inf2  inf2 '
+			'inf1  inf1 '
+			'inno1 inno1'
+			'inno2 inno2'
+			'inno3 inno3';
+		width: 70%;
+	}
+
+	.gridContainer p,
+	.gridContainer h2 {
+		text-align: right;
+	}
+
+	#information4,
+	#information6 {
+		display: none;
 	}
 }
 
@@ -283,11 +337,27 @@ form {
 	.pricingPage main {
 		flex-direction: column;
 	}
+
 	.pricingPage main aside {
 		display: flex;
 		width: 100%;
 	}
+
 	#product1 {
+		display: none;
+	}
+
+	.gridContainer {
+		grid-template-areas:
+			'inf1  inf2 '
+			'inf3  inf2 '
+			'inf3  inf5 '
+			'inf6  inf6 '
+			'inno1 inno2';
+	}
+
+	#information4,
+	#innovation3 {
 		display: none;
 	}
 }
@@ -305,7 +375,7 @@ form {
 	}
 
 	.gridContainer {
-		grid-template-areas: 
+		grid-template-areas:
 			'inf2  inf1  inf3'
 			'inf5  inf1  inf3'
 			'inf5  inf1  inf4'
@@ -316,9 +386,10 @@ form {
 	.pricingPage main article {
 		flex-basis: 100%;
 	}
+
 	.pricingPage main table {
 		flex-grow: 1;
 	}
-	
+
 
 }
